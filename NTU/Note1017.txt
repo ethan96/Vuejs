@@ -1,0 +1,84 @@
+SPA
+較快速的瀏覽體驗
+降低伺服器的請求處理能力
+
+SEO 會很差(所有物件的內容都藏在Javascript)
+
+Nuxt.js 可解決 SEO問題(SPA問題)
+vue.js/node.js
+SSR
+嚴謹的資料夾規範
+
+universal application code structure in Next.js
+
+
+--
+VS code
+node.js
+
+in vscode 請安裝如下套件
+1. Chinese 中文化
+2. vetur
+3. vue 2 snippets
+4. todo highlight
+5. material icon theme(安裝完點選啟動)
+
+--
+新建立專案資料夾
+VS code選擇該資料夾
+打開 terminal
+
+(用npx取代npm，產生 nuxt專案)
+指令: npx create-nuxt-app First-Nuxt-Project
+執行後選擇 Javascript & npm & None(不用 UI模型) > 不用 modules > 不用linting tools > 不用 testing framework > Universal SSR/SSG > node.js > Dev tools 不用 > Github 
+
+
+--
+安裝完成後
+cd project-name (進入專案資料夾)
+npm run dev
+
+
+pages 目錄底下 index.vue
+
+--
+Vue page
+template(一定要)
+script(一定要)
+style(不一定)
+
+一個 template 只能放一個元件(元素)
+
+--
+nuxt-link 標籤為 Nuxt 專有，可直接連結到內部連結(外部網站則還是用a標籤)
+--
+如果要關掉 vue dev 需按下 ctrl + c ，就可以關掉 dev site
+--
+如果想切換 port (不想要 3000 port)，需進入到 nuxt.config.js，在裡面添加 server 屬性，設定 port: 8888
+--
+_id.vue (底線開頭的 vue page) 參數不管換成多少都可以接到 page (底線表示動態效果)
+如果要從URL參數取得資料
+_id 要對到 params.id 的值，換成 pid 就要改成 params.pid
+--
+assets 資料夾可以放資源檔案 CSS
+在 nuxt.config.js 設定全域CSS資源 > 裡面有 css: []，寫到 '@/assets/stylesheets/main.css'
+也可以引用 scss 但要安裝其他套件(參考講義)
+--
+MVVM 在page 的script地方寫上 data() 並寫 return
+
+
+--
+1017
+
+下載專案並解壓縮
+
+還原 npm 套件指令，根據 package.json 裡面的 dependencies 設定裡面顯示，讓專案長出 node_modules 資料夾
+npm install (or) npm i
+
+在 vue 裡面綁定事件
+@click
+
+元素內加入判斷式: v-if
+:class  (加入冒號為榜定效果) :class="[ { 'text-red': n > 5  }]"   //透過判斷來綁定要不要套用
+form submit 事件要寫成  @submit
+submit.prevent(防止事件)
