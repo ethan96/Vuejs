@@ -2,7 +2,6 @@
   <div>
     <div class="container">
       <h1>TODO List</h1>
-      <!-- TODO: 設計新增待辦事項UI -->
       <div class="create-todo-ui">
         <!--當表單送出時會執行 create to do-->
 
@@ -48,19 +47,20 @@
       </div> -->
       
       <!--用模板替代 start-->
+      <TodoList />
       <div v-if="todoList.length > 0" class="todo-list-ui">
         <!--TodoItem category="財務" text="Todo1" />-->
         <!-- <TodoItem :todo="{ category: '學習', text: 'Todo1'}" /> -->
-        <TodoItem v-for="(todo, idx) in todoList" :key="todo.createdAt" :todo="todo" @onRemoveClick="removeItem(idx)" />
+        <TodoItem v-for="{todo, idx} in todoList" :key="todo.createdAt" :todo="todo" @onRemoveClick="removeItem(idx)" />
       </div>
       <!--用模板替代 end-->
     </div>
   </div>
 </template>
 <script>
+import CreateTodoForm from "@/components/CreateTodoForm";
 import TodoItem from "@/components/TodoItem";
 import TodoList from "@/components/TodoList";
-import CreateTodoForm from "@/components/CreateTodoForm";
 export default {
   name: "todoListPage",
   components: {
@@ -105,7 +105,7 @@ export default {
       this.todoList.push(todo); //[].push('data1') => { 'data1'}
     },
     removeItem(idx) {
-      //console.log("[準備移除某個待辦]");
+      console.log("[準備移除某個待辦]");
       //移除一筆位於 idx 的資料
       this.todoList.splice(idx, 1);
     }
