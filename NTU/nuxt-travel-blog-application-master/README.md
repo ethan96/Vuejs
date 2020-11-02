@@ -1,4 +1,4 @@
-# nuxt-todo-list-app
+# travel-blog
 
 ## Build Setup
 
