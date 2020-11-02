@@ -15,7 +15,8 @@
       </select>
       <button :disabled="Boolean(formErrorText)">新增</button>
     </form>
-    <ul v-html="formErrorHtml"></ul>
+    <!-- <ul v-html="formErrorHtml"></ul> -->
+    <ul v-html="formErrorText"></ul>
   </div>
 </template>
 <script>
@@ -35,9 +36,9 @@ export default {
       //回傳錯誤訊息
       return errorText;
     },
-    formErrorHtml() {
-      return "ABC";
-    }
+    // formErrorHtml() {
+    //   return "ABC";
+    // }
   },
   data() {
     return {
