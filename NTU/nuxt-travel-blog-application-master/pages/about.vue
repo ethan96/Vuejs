@@ -21,14 +21,92 @@
         </div>
 
         <!-- AboutTopic -->
-        <AboutTopic title="Story" image="topic_1.jpg" />
+        <div class="row mb-5">
+          <div class="col-md-4">
+            <img
+              class="w-100"
+              src="https://picsum.photos/id/1041/800/600"
+              alt=""
+            />
+          </div>
+          <div class="col-md-8">
+            <h3>Topic Title</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed
+              sapiente quia est facere asperiores numquam eveniet dicta
+              voluptatibus? Consectetur perferendis necessitatibus, dicta nihil
+              nobis corrupti et? Porro mollitia tempora quisquam quia veniam!
+              Enim nobis qui, ab et odio eligendi maiores illo. Dolorum corporis
+              cumque vel ipsam recusandae, at fuga maxime!
+            </p>
+          </div>
+        </div>
         <!-- AboutTopic end -->
         <!-- AboutTopic -->
-        <AboutTopic title="Team" image="topic_2.jpg" :reverse="true" />
+        <div class="row mt-5">
+          <div class="col-md-4 order-md-2">
+            <img
+              class="w-100"
+              src="https://picsum.photos/id/890/800/600"
+              alt=""
+            />
+          </div>
+          <div class="col-md-8 order-md-1">
+            <h3>Topic Title</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed
+              sapiente quia est facere asperiores numquam eveniet dicta
+              voluptatibus? Consectetur perferendis necessitatibus, dicta nihil
+              nobis corrupti et? Porro mollitia tempora quisquam quia veniam!
+              Enim nobis qui, ab et odio eligendi maiores illo. Dolorum corporis
+              cumque vel ipsam recusandae, at fuga maxime!
+            </p>
+          </div>
+        </div>
         <!-- AboutTopic end -->
         <!-- AboutTopic -->
+        <div class="row mt-5">
+          <div class="col-md-4">
+            <img
+              class="w-100"
+              src="https://picsum.photos/id/1052/800/600"
+              alt=""
+            />
+          </div>
+          <div class="col-md-8">
+            <h3>Topic Title</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed
+              sapiente quia est facere asperiores numquam eveniet dicta
+              voluptatibus? Consectetur perferendis necessitatibus, dicta nihil
+              nobis corrupti et? Porro mollitia tempora quisquam quia veniam!
+              Enim nobis qui, ab et odio eligendi maiores illo. Dolorum corporis
+              cumque vel ipsam recusandae, at fuga maxime!
+            </p>
+          </div>
+        </div>
         <!-- AboutTopic end -->
         <!-- AboutTopic -->
+        <div class="row mt-5">
+          <div class="col-md-4 order-md-2">
+            <img
+              class="w-100"
+              src="https://picsum.photos/id/1021/800/600"
+              alt=""
+            />
+          </div>
+          <div class="col-md-8 order-md-1">
+            <h3>Topic Title</h3>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Sed
+              sapiente quia est facere asperiores numquam eveniet dicta
+              voluptatibus? Consectetur perferendis necessitatibus, dicta nihil
+              nobis corrupti et? Porro mollitia tempora quisquam quia veniam!
+              Enim nobis qui, ab et odio eligendi maiores illo. Dolorum corporis
+              cumque vel ipsam recusandae, at fuga maxime!
+            </p>
+          </div>
+        </div>
         <!-- AboutTopic end -->
       </div>
     </section>
@@ -37,6 +115,6 @@
 </template>
 <script>
 export default {
-  name: "AboutPage"
+  name: "AboutPage",
 };
 </script>
