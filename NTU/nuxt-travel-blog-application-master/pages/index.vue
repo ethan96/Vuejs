@@ -29,14 +29,14 @@
     </section>
     <!-- ArticleSection -->
     <!-- Footer -->
-    <!-- <footer class="py-3">
+    <footer class="py-3">
       <div class="container text-center">
         <h5>
           <nuxt-link to="/">Nuxt Travel Blog</nuxt-link>
         </h5>
         <p class="mb-0">2020 &copy; All Rights Reserved</p>
       </div>
-    </footer> -->
+    </footer>
     <!-- Footer end -->
   </div>
 </template>
@@ -44,7 +44,6 @@
 <script>
 export default {
   name: "IndexPage",
-  //layout: "layout2"
 };
 </script>
 
