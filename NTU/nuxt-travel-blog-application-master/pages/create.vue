@@ -1,6 +1,8 @@
+
+
 <template>
   <div>
-      <form @submit.prevent="onSubmit">
+      <form>
           <InputGroup label="城市" @onChange="(val) => (city = val)" :defaultValue="city"/>
           <TagInputGroup :defaultValue="tagList"
           @onChange="(val) => (tagList = val)" />
@@ -8,18 +10,6 @@
       <p>標題: {{ title }}</p>
       <p>城市: {{ city }}</p>
       <p>標題列表: {{ tagList }}</p>
-      <div class="form-group">
-        <GoogleMapInput />
-      </div>
-      <div class="form-group">
-        <input change="fileChange" type="file" accept=".jpg,.png" />
-        <img />
-      </div>
-      <div>
-        <button class="btn btn-primary" type="submit">
-          Create article
-        </button>
-      </div>
   </div>
 </template>
 <script>
