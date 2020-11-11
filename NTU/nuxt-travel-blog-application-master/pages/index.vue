@@ -23,7 +23,12 @@
           <div class="section-title-bar bg-warning"></div>
         </div>
         <!-- ArticleList -->
-
+        <div class="row">
+          <div v-for="article in articleList" :key="article.id" class="col-md-4">
+            {{ article }}
+            <ArticleCard :article="article"/>
+          </div>
+        </div>
         <!-- ArticleList end -->
       </div>
     </section>
@@ -52,12 +57,28 @@ export default {
   //layout: "layout2",
   data() {
     return {
-      previewImage: ""
+      previewImage: "",
+      articleList: []
     }
   },
   mounted() {
     console.log(this.$author.name);
     console.log(this.$getAuthorInfo('John'));
+    vm.$db
+    .collection("articleList")
+    .get()
+    .then((docs) => {
+      docs.forEach((doc) => {
+        console.log("文件", doc);
+        const article = doc.data();
+        article.id = doc.id;
+        articleList.push(article);
+      })
+      //更新vm文章列表
+    })
+    .catch((err) => {
+      console.log("取得失敗", err);
+    });
   },
   methods: {
     fileChange(event) {

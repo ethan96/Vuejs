@@ -1,3 +1,6 @@
+const API_KEY = "AIzaSyD-LSYTQRVDExV3ZugJ93gdeK8I2-Dq6sU";
+const GOOGLE_MAP_SDK = `https://maps.googleapis.com/maps/api/js?key=${API_KEY}&libraries=places`
+
 export default {
   // Global page headers (https://go.nuxtjs.dev/config-head)
   head: {
@@ -9,6 +12,9 @@ export default {
     ],
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+    ],
+    script: [
+      { src: GOOGLE_MAP_SDK }
     ]
   },
 
