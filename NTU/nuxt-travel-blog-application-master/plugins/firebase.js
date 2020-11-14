@@ -11,13 +11,7 @@ import 'firebase/storage'
 
 //設定專案的 config
 const config = {
-    apiKey: "AIzaSyAPe0cZe9Hi3PVXvWVw078tGlEjzZDnmVY",
-    authDomain: "nuxt-app-577c0.firebaseapp.com",
-    databaseURL: "https://nuxt-app-577c0.firebaseio.com",
-    projectId: "nuxt-app-577c0",
-    storageBucket: "nuxt-app-577c0.appspot.com",
-    messagingSenderId: "655561115159",
-    appId: "1:655561115159:web:3beabf1096a214d5493e52"
+
 };
 //確認專案是否未初始化
 if (firebase.apps.length < 1) {

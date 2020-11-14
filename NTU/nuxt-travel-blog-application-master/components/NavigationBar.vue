@@ -11,12 +11,26 @@
         <a>Sign In</a>
         <a>Register</a>
       </div>
+      <Model v-if="showLogin">
+        <h3>Sign In</h3>
+        <form>
+          <InputGroup label="Email" type="email" :required="true" placeholder="請輸入email" @onChange="(val) => (loginEmail = val)" />
+          <InputGroup label="Password" type="password" :required="true" @onChange="(val) => {loginPassword = val}" />
+          <button class="btn btn-primary btn-block">Login</button>
+          <p>{{ loginEmail }}</p>
+          <p>{{ loginPassword }}</p>
+        </form>
+      </Model>
     </nav>
   </div>
 </template>
 <script>
 export default {
   name: "NavigationBar",
+  data() {
+    loginEmail = "",
+    loginPassword = ""
+  }
 };
 </script>
 <style>

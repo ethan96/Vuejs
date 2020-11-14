@@ -1,11 +1,21 @@
-
-
 <template>
   <div>
       <form>
           <InputGroup label="城市" @onChange="(val) => (city = val)" :defaultValue="city"/>
           <TagInputGroup :defaultValue="tagList"
           @onChange="(val) => (tagList = val)" />
+        <div class="form-group">
+          <GoogleMapInput :value="location" @locationChanged="(val) => (location = val)" />
+        </div>
+        <div class="form-group">
+          <input change="fileChange" type="file" accept=".jpg,.png" />
+          <img />
+        </div>
+        <div>
+          <button class="btn btn-primary" type="submit">
+            Create article
+          </button>
+        </div>
       </form>
       <p>標題: {{ title }}</p>
       <p>城市: {{ city }}</p>
@@ -21,7 +31,12 @@ export default {
           city: "台北",
           tagList: ["台灣"],
           authorInfo: "",
-          previewImage: "https://picsum.photo/id/192/166/800"
+          previewImage: "https://picsum.photo/id/192/166/800",
+          authorInfo: "",
+          location: {
+            lat: 25,
+            lng: 122
+          }
       }
   },
   methods: {
@@ -33,6 +48,7 @@ export default {
         city: vm.city,
         tagList: vm.tagList,
         previewImage: vm.previewImage,
+        location: vm.location,
         createdAt: new Date().getTime()
       };
       console.log('article', article);

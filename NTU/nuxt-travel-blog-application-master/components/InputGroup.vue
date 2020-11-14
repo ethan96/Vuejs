@@ -8,6 +8,19 @@
 <script>
 export default {
   name: "InputGroup",
+  props: {
+    label: {},
+    defaultValue: {},
+    type: {
+      default: 'text'
+    },
+    placeholder: {
+      default: "預設提示"
+    },
+    required: {
+      default: false
+    }
+  },
   data() {
     return {
       inputText: "",

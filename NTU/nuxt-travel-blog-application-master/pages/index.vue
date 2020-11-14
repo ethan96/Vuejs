@@ -64,7 +64,7 @@ export default {
   mounted() {
     console.log(this.$author.name);
     console.log(this.$getAuthorInfo('John'));
-    vm.$db
+    this.$db
     .collection("articleList")
     .get()
     .then((docs) => {
